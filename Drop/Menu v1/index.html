@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Menu v1 - OkzzO</title> 
+    <link href="http://fonts.cdnfonts.com/css/barca" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="bt/startbootstrap-grayscale-gh-pages/css/styles.css"/>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body{
+            font-size: 14px;
+            font-family: 'Montserrat', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <!-- Input alert sizes -->
+    <input type="hidden" name="note_size_alert" value="true">
+
+    <!-- Msg na Descrição do produto para o cliente se atentar as medidas -->
+    <span class="alert_customer_sizes">
+        <ion-icon class="pr-2" name="alert-outline"></ion-icon><strong>Atenção</strong>: Confira as medidas antes comprar!
+    </span>
+    
+
+    <nav id="c_m">
+        <div class="row mx-0">
+            <div class="col-3 col-sm-3 col-md-3 col-lg-2 cont_nav_btns px-0">
+                <div class="nav_btn_mob_display btn_t_m animate__animated animate__fadeIn change_state_aside">
+                    <ion-icon name="apps-outline" class="animate__animated animate__fadeIn mr-2"></ion-icon>
+                    <span class="d-none d-sm-block d-md-block d-lg-block">MENU</span>
+                </div>
+            </div>
+            <div class="cont_nav_btns d-none d-sm-none d-lg-flex col-md-1 col-lg-1">
+                <a href="/loja/" class="nav_btn_mob_display">
+                    <ion-icon name="shirt-outline" class="mr-1"></ion-icon>
+                    <span>LOJA</span>
+                </a>                
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-6 px-0 brand_c_cont">
+                <a href="/" class="outline-none brand_c justify-content-center justify-content-sm-center justify-content-md-center justify-content-lg-center animate__animated animate__flipInX">
+                    <img class="animate__animated animate__flipInX animate__fast" src="/wp-content/uploads/2021/07/DACAW-LOGO-CROPPED-BLACK.png" alt="DACAW Logotipo">
+                </a>
+            </div>
+            <div class="search_navbar d-none d-sm-block col-sm-2 d-md-block col-md-2 d-lg-block col-lg-2 cont_nav_btns">
+                <div class="nav_btn_mob_display">
+                    <ion-icon name="search-outline"></ion-icon>
+                    <span>BUSCAR</span>
+                </div>
+            </div>
+            <a href="/carrinho" class="col-3 col-sm-1 col-md-1 col-lg-1 cont_nav_btns px-0">
+                <div class="nav_btn_mob_display">
+                    <ion-icon name="cart-outline"></ion-icon>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <div id="pelic_n_a" class="change_state_aside"></div>
+    <nav id="nav_aside" class="col-12 col-sm-6 col-md-6 col-lg-4">
+        <div class="header">
+            <ion-icon class="change_state_aside" name="close-outline"></ion-icon>
+        </div>
+        <div class="departs_cont">
+            <ul class="btns_top_aside row mx-0">
+                <li class="animate__animated animate__flipInX col-4" title="Minha Compras">
+                    <a href="/me/orders/" class="link link--helike">
+                        <ion-icon class="pr-2" name="cube-outline"></ion-icon>
+                        PEDIDOS
+                    </a>
+                </li>
+                <li class="animate__animated animate__flipIn col-4" title="Minha conta">
+                    <a href="/me" class="link link--helike">
+                        <ion-icon class="pr-2" name="person-circle-outline"></ion-icon>
+                        <div>CONTA</div>
+                    </a>
+                </li>
+                <li class="animate__animated animate__flipInX col-4" title="Lista de Desejos">
+                    <a href="/lista-de-desejos" class="link link--helike">
+                        <ion-icon class="pr-2" name="bookmarks-outline"></ion-icon>
+                        <div>WISHLIST</div>
+                    </a>
+                </li>
+                <li class="animate__animated animate__flipInX " title="Ir para Loja">
+                    <a href="/loja" class="link link--mneme">
+                        <ion-icon class="pr-2" name="ribbon-outline"></ion-icon>
+                        <div>IR PARA LOJA</div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="departs row">
+                <li class="col-6 d-flex align-items-center justify-content-center animate__animated animate__fadeInDown" title="Jaquetas e Moletons">
+                    <div class="d-flex align-items-center justify-content-center" style="background-image: url(https://dacaw.com.br/wp-content/uploads/2021/07/Homem-De-Jaqueta-De-Couro-Preta-E-Bone-De-Malha-Preta.jpg);">
+                        <a href="https://dacaw.com.br/categoria-produto/jaqueta-moletons/" class="d-flex justify-content-end" class="d-flex align-items-center justify-content-center">
+                            <div class="name_tag">
+                                <p>Jaquetas & <wbr>Moletons<wbr></p>
+                            </div>
+                            <div class="see_all"><ion-icon name="chevron-forward-outline"></ion-icon>Ver na loja</div>
+                            <ion-icon class="icon_bottom" name="git-commit-outline"></ion-icon>
+                            <ion-icon class="icon_top" name="link-outline"></ion-icon>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-6 d-flex align-items-center justify-content-center animate__animated animate__fadeInRight" title="Conjuntos">
+                    <div class="d-flex align-items-center justify-content-center" style="background-image: url(https://dacaw.com.br/wp-content/uploads/2021/07/conjunto-azul-fashion.jpg);">
+                        <a href="https://dacaw.com.br/categoria-produto/conjuntos/" class="d-flex justify-content-end">
+                            <div class="name_tag">
+                                <p>Conjuntos</p>
+                            </div>
+                            <div class="see_all"><ion-icon name="chevron-forward-outline"></ion-icon>Ver na loja</div>
+                            <ion-icon class="icon_bottom" name="git-commit-outline"></ion-icon>
+                            <ion-icon class="icon_top" name="link-outline"></ion-icon>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-6 d-flex align-items-center justify-content-center animate__animated animate__fadeInLeft" title="Acessórios">
+                   <div class="d-flex align-items-center justify-content-center" style="background-image: url(https://dacaw.com.br/wp-content/uploads/2021/05/acessorio-colar-jogado-no-lencol.jpg)">
+                        <a href="https://dacaw.com.br/categoria-produto/acessorios/" class="d-flex justify-content-end">
+                            <div class="name_tag">
+                                <p>Acessórios</p>
+                            </div>
+                            <div class="see_all"><ion-icon name="chevron-forward-outline"></ion-icon>Ver na loja</div>
+                            <ion-icon class="icon_bottom" name="git-commit-outline"></ion-icon>
+                            <ion-icon class="icon_top" name="link-outline"></ion-icon>
+                        </a>
+                   </div>
+                </li>
+                <li class="col-6 d-flex align-items-center justify-content-center animate__animated animate__fadeInUp" title="Camisetas">
+                    <div class="d-flex align-items-center justify-content-center" style="background-image: url(https://dacaw.com.br/wp-content/uploads/2021/05/garoto-andando-rua-de-camiseta-branca.jpg);">
+                        <a href="https://dacaw.com.br/categoria-produto/camisetas/" class="d-flex justify-content-end">
+                            <div class="name_tag">
+                                <p>Camisetas</p>
+                            </div>
+                            <div class="see_all"><ion-icon name="chevron-forward-outline"></ion-icon>Ver na loja</div>
+                            <ion-icon class="icon_bottom" name="git-commit-outline"></ion-icon>
+                            <ion-icon class="icon_top" name="link-outline"></ion-icon>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-6 d-flex align-items-center justify-content-center animate__animated animate__fadeInLeft" title="Calçados">
+                    <div class="d-flex align-items-center justify-content-center" style="background-image: url(https://dacaw.com.br/wp-content/uploads/2021/05/Hc6ac2039b4714c008a7a7f39d5eb331dS-3.jpg);">
+                        <a href="https://dacaw.com.br/categoria-produto/calcados/" class="d-flex justify-content-end" >
+                            <div class="name_tag">
+                                <p>Calçados</p>
+                            </div>
+                            <div class="see_all"><ion-icon name="chevron-forward-outline"></ion-icon>Ver na loja</div>
+                            <ion-icon class="icon_bottom" name="git-commit-outline"></ion-icon>
+                            <ion-icon class="icon_top" name="link-outline"></ion-icon>
+                        </a>
+                    </div>
+                </li>
+                <li class="col-6 d-flex align-items-center justify-content-center animate__animated animate__fadeInLeft" title="Calças e bermudas">
+                    <div class="d-flex align-items-center justify-content-center" style="background-image: url(https://dacaw.com.br/wp-content/uploads/2021/05/Haf7d641082b54ec998c37fc0c2dc576dG.jpg);">
+                        <a href="https://dacaw.com.br/categoria-produto/calcas-e-bermudas/" class="d-flex justify-content-end" >
+                            <div class="name_tag">
+                                <p>Calças e Bermudas</p>
+                            </div>
+                            <div class="see_all"><ion-icon name="chevron-forward-outline"></ion-icon>Ver na loja</div>
+                            <ion-icon class="icon_bottom" name="git-commit-outline"></ion-icon>
+                            <ion-icon class="icon_top" name="link-outline"></ion-icon>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Close Accessibility IMPORTANTE -->
+    <div class="close_accessibility_mob d-sm-none d-md-none d-lg-none d-xl-none change_state_aside">
+        <small class="w-100">
+            <ion-icon class="change_state_aside mr-2" name="close-circle-outline"></ion-icon>
+            Fechar<span class="ml-2"></span>
+        </small>
+    </div>
+
+   <!-- Menu ends here -->
+
+
+
+
+
+
+
+
+
+    <main>
+
+        
+        <div id="welcomeJumb" class="jumbotron m-0"> 
+            <h1 class="d-none d-sm-block d-md-block d-lg-block d-xl-block">DIFERENTE</h1>
+            <p class="lead d-none d-sm-block d-md-block d-lg-block d-xl-block">Diferencie-se, destaque-se, encontre a peça perfeita para você!</p>
+            <hr class="my-4 mx-0 w-50 d-none d-sm-block d-md-block d-lg-block d-xl-block">
+            <p class="free_ship_msg"><ion-icon name="rocket-outline" class="mr-2" style="font-size: 1.4em;padding: 0 .1em;"></ion-icon>FRETE GRÁTIS EM TODO O SITE!</p>
+            <p class="lead mt-4">
+                <a class="link link--helike btn-s1-white shadow mx-auto mx-sm-auto mx-md-0 mx-lg-0" href="/loja/" role="button"><ion-icon name="caret-forward-outline"></ion-icon>Explorar</a>
+            </p>
+        </div>
+        
+
+        
+        <div class="row w-100 see_tags_products">
+            <h1>
+                <ion-icon name="flame-outline" class="mr-2"></ion-icon>
+                DESTAQUES
+                <a href="/loja" class="link link--thebe">
+                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                    VER NA LOJA
+                </a>
+            </h1>
+        </div>
+    
+
+        <section class="cards_simple_cont px-md-5 position-relative d-none">
+            <img src="img/folhagem-palmeiras-1.png" alt="Folhagem Palmeiras" class="position-absolute" style="left: -20em; bottom: -6em; transform: rotate( 65deg );">
+            <div class="row justify-content-center px-md-5">           
+                <div class="card_simple col-12 col-sm-4 col-md-4 col-lg-4 animate__animated animate__fadeInLeft animate__fast">
+                    <div class="content grad-b-to-w">
+                        <div class="title">
+                            <h4>
+                                <ion-icon name="radio-button-on-outline" class="pr-2"></ion-icon>
+                                Streetwear
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_simple col-12 col-sm-4 col-md-4 col-lg-4 animate__animated animate__fadeInDown" >
+                    <div class="content text-white grad-b-to-w-2">
+                        <img src="img/killwinne-jaqueta.png" class="w-100" alt="Asiático com Jaqueta Techwear" style="right:.5em;">
+                        <div class="title">
+                            <h4>
+                                <ion-icon name="radio-button-on-outline" class="pr-2"></ion-icon>
+                                Techwear
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="card_simple col-12 col-sm-4 col-md-4 col-lg-4 animate__animated animate__fadeInRight animate__fast">
+                    <div class="content grad-b-to-w">
+                        <div class="title">
+                            <h4>
+                                <ion-icon name="radio-button-on-outline" class="pr-2"></ion-icon>
+                                Acessórios
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Section CArousel departamentos-->
+        
+    <div class="cards-ui-container">
+        <div class="row mx-0">
+            <div class="col-12 col-lg-4 title_depa_cont">
+                <div>
+                    <h1>
+                        Navegue
+                        <a href="https://dacaw.com.br/loja" class="link link--helike see_all"><ion-icon name="chevron-forward-outline"></ion-icon>Ir Para Loja</a>
+                    </h1>
+                </div>                
+            </div>
+            <div class="card_wrapper col-lg-8">
+                <div class="cards-cont row">
+                    <div class="ui-card mx-auto col-10 col-sm-6 col-md-3 col-lg-3" style="--bg-image: url(https://dacaw.com.br/wp-content/uploads/2021/08/depa-caps-bg-2.gif);" title="Chapéus, Gorros, Bonés">
+                        <div class="click_to_down">
+                            <small>Cap's</small>
+                            <ion-icon name="caret-down-circle-outline"></ion-icon>                            
+                        </div>
+                        <div class="depa-name animate__animated animate__flipInX"><ion-icon name="pin-outline"></ion-icon>Cap's</div>
+                        <a href="https://dacaw.com.br/categoria-produto/acessorios/caps/" class="borderA_full animate__animated animate__fadeInUp">
+                            <ion-icon name="ellipsis-vertical-outline" class="mr-1"></ion-icon>
+                            Ver na loja
+                        </a>
+                    </div>
+                    <div class="ui-card mx-auto col-10 col-sm-6 col-md-3 col-lg-3" style="--bg-image: url(https://dacaw.com.br/wp-content/uploads/2021/08/depa-bags-bg.gif);" title="Mochilas">
+                        <div class="click_to_down">
+                            <small>Bags</small>
+                            <ion-icon name="caret-down-circle-outline"></ion-icon>                            
+                        </div>
+                        <div class="depa-name animate__animated animate__flipInX"><ion-icon name="pin-outline"></ion-icon>Bags</div>
+                        <a href="https://dacaw.com.br/categoria-produto/bags/" class="borderA_full animate__animated animate__fadeInUp">
+                            <ion-icon name="ellipsis-vertical-outline" class="mr-1"></ion-icon>
+                            Ver na loja
+                        </a>
+                    </div>
+                    <div class="ui-card mx-auto col-10 col-sm-6 col-md-3 col-lg-3" style="--bg-image: url(https://dacaw.com.br/wp-content/uploads/2021/08/depa-necklaces-bg-1.gif);" title="Colares e Correntes">
+                        <div class="click_to_down">
+                            <small>Colares</small>
+                            <ion-icon name="caret-down-circle-outline"></ion-icon>                            
+                        </div>
+                        <div class="depa-name animate__animated animate__flipInX"><ion-icon name="pin-outline"></ion-icon>Colares</div>
+                        <a href="https://dacaw.com.br/categoria-produto/acessorios/colares-e-correntes/" class="borderA_full animate__animated animate__fadeInUp">
+                            <ion-icon name="ellipsis-vertical-outline" class="mr-1"></ion-icon>
+                            Ver na loja
+                        </a>
+                    </div>
+                    <div class="ui-card mx-auto col-10 col-sm-6 col-md-3 col-lg-3" style="--bg-image: url(https://dacaw.com.br/wp-content/uploads/2021/08/depa-conjuntos-bg.gif);" title="Conjuntos">
+                        <div class="click_to_down">
+                            <small>Conjuntos</small>
+                            <ion-icon name="caret-down-circle-outline"></ion-icon>                            
+                        </div>
+                        <div class="depa-name animate__animated animate__flipInX"><ion-icon name="pin-outline"></ion-icon>Conjuntos</div>
+                        <a href="https://dacaw.com.br/categoria-produto/conjuntos/" class="borderA_full animate__animated animate__fadeInUp">
+                            <ion-icon name="ellipsis-vertical-outline" class="mr-1"></ion-icon>
+                            Ver na loja
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="cards-ui-container">
+        <div class="row mx-0 flex-md-row-reverse flex-lg-row-reverse">
+            <div class="col-12 col-lg-4 title_depa_cont">
+                <div>
+                    <h1>
+                        Acessórios
+                        <a href="https://dacaw.com.br/categoria-produto/acessorios/" class="link link--helike see_all"><ion-icon name="chevron-forward-outline"></ion-icon>Ver tudo</a>
+                    </h1>
+                </div>                
+            </div>
+            <div class="card_wrapper col-lg-8">
+                <div class="cards-cont row">
+                    <div class="ui-card mx-auto col-10 col-sm-6 col-md-3 col-lg-3" style="--bg-image: url(https://dacaw.com.br/wp-content/uploads/2021/08/depa-rings-bg.gif);" title="Anéis e Dedeiras">
+                        <div class="click_to_down">
+                            <small>Anéis</small>
+                            <ion-icon name="caret-down-circle-outline"></ion-icon>                            
+                        </div>
+                        <div class="depa-name animate__animated animate__flipInX"><ion-icon name="pin-outline"></ion-icon>Anéis</div>
+                        <a href="https://dacaw.com.br/categoria-produto/acessorios/aneis-dedeiras/" class="borderA_full animate__animated animate__fadeInUp">
+                            <ion-icon name="ellipsis-vertical-outline" class="mr-1"></ion-icon>
+                            Ver na loja
+                        </a>
+                    </div>
+                    <div class="ui-card mx-auto col-10 col-sm-6 col-md-3 col-lg-3" style="--bg-image: url(https://dacaw.com.br/wp-content/uploads/2021/08/depa-watches-bg-1.gif);" title="Relógios">
+                        <div class="click_to_down">
+                            <small>Relógios</small>
+                            <ion-icon name="caret-down-circle-outline"></ion-icon>                            
+                        </div>
+                        <div class="depa-name animate__animated animate__flipInX"><ion-icon name="pin-outline"></ion-icon>Relógios</div>
+                        <a href="https://dacaw.com.br/categoria-produto/acessorios/relogios/" class="borderA_full animate__animated animate__fadeInUp">
+                            <ion-icon name="ellipsis-vertical-outline" class="mr-1"></ion-icon>
+                            Ver na loja
+                        </a>
+                    </div>
+                    <div class="ui-card mx-auto col-10 col-sm-6 col-md-3 col-lg-3" style="--bg-image: url(https://dacaw.com.br/wp-content/uploads/2021/08/depa-bracelets-bg-1.gif);" title="Pulseiras e Relógios">
+                        <div class="click_to_down">
+                            <small>Pulseiras</small>
+                            <ion-icon name="caret-down-circle-outline"></ion-icon>                            
+                        </div>
+                        <div class="depa-name animate__animated animate__flipInX"><ion-icon name="pin-outline"></ion-icon>Pulseiras & Relógios</div>
+                        <a href="https://dacaw.com.br/categoria-produto/acessorios/pulseiras-relogios-acessorios/" class="borderA_full animate__animated animate__fadeInUp">
+                            <ion-icon name="ellipsis-vertical-outline" class="mr-1"></ion-icon>
+                            Ver na loja
+                        </a>
+                    </div>
+                    <div class="ui-card mx-auto col-10 col-sm-6 col-md-3 col-lg-3" style="--bg-image: url(https://dacaw.com.br/wp-content/uploads/2021/08/depa-glasses-2.gif);" title="Óculos">
+                        <div class="click_to_down">
+                            <small>Óculos</small>
+                            <ion-icon name="caret-down-circle-outline"></ion-icon>                            
+                        </div>
+                        <div class="depa-name animate__animated animate__flipInX"><ion-icon name="pin-outline"></ion-icon>Óculos</div>
+                        <a href="https://dacaw.com.br/categoria-produto/acessorios/oculos/" class="borderA_full animate__animated animate__fadeInUp">
+                            <ion-icon name="ellipsis-vertical-outline" class="mr-1"></ion-icon>
+                            Ver na loja
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+
+
+
+    <!-- footer STARTS HERE -->
+
+
+    <footer id="footer_c_main" class="container-fluid pt-5">
+        <div class="container">
+           <div class="row">
+              <div class="col-md-6">
+                 <div class="row mb-5">
+                    <div class="col-md-6">
+                       <div class="logo-part">
+                          <div>
+                            <img src="/wp-content/uploads/2021/07/DACAW-LOGO-WHITE-TRANSP.png" class="logo-footer" >
+                            <p>- ATENDA AO CHAMADO</p>
+                          </div>
+                       </div>
+                    </div>
+                    <div class="col-md-6 px-3 about-footer mt-4 mt-sm-0">
+                       <h4>SOBRE A MARCA</h4>
+                       <p>Como objetivo, oferecemos as melhores tendências da moda urbana, valorizando e priorizando o conforto, usabilidade e estética para lhe proporcionar a melhor experiência possível!</p>
+                       <a href="#" class="btn btn-footer mb-2 d-none">
+                           <ion-icon name="link-outline" class="mr-2"></ion-icon>
+                           Conheça
+                        </a>
+                    </div>
+                 </div>
+              </div>
+              <div class="col-md-6">
+                 <div class="row">
+                    <div class="col-md-6 px-3">
+                       <h4>INFORMAÇÕES</h4>
+                       <div class="row mb-5">
+                        <ul>
+                            <li>
+                                <a href="#" class="link-footer">
+                                <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    Acompanhe seu pedido</a> 
+                            </li>
+                            <li>
+                                <a href="/contato" class="link-footer">
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    Fale Conosco</a>
+                            </li>
+                            <li>
+                                <a href="/termos-de-uso/" class="link-footer">
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    TERMOS & CONDIÇÕES</a>
+                            </li>
+                            <li>
+                                <a href="/politica-de-privacidade/" class="link-footer">
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    POLÍTICA DE PRIVACIDADE</a> 
+                            </li>
+                            <li>
+                                <a href="/fretes-e-prazos/" class="link-footer">
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    FRETE E PRAZOS</a>
+                            </li>
+                            <li>
+                                <a href="/trocas-devolucoes/" class="link-footer">
+                                    <ion-icon name="chevron-forward-outline"></ion-icon>
+                                    Troca & Devoluções</a> 
+                            </li>
+                         </ul>
+                       </div>
+                    </div>
+                    <div class="col-md-6">
+                       <h4 class="social_title">- Siga DACAW - </h4>
+                       <div class="social">
+                            <a href="https://www.facebook.com/dacaw.ofc/">
+                                <ion-icon name="logo-facebook"></ion-icon>
+                            </a>
+                            <a href="https://www.instagram.com/dacaw.ofc/">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+           </div>
+        </div>
+        <div class="bottom row">
+            <div class="p-md-0 p-mx-0 col-12 col-sm-12 col-md-3 col-lg-3 d-flex align-items-center justify-content-center justify-content-sm-center justify-content-md-start justify-content-lg-start">
+                <p class="col-12 m-md-0 m-lg-0 p-mx-0">
+                    <img class="logo-2-footer mr-2" src="https://dacaw.com.br/wp-content/uploads/2021/07/DACAW-LOGO-ONLY-D.jpg" alt="DACAW LOGO 2 FOOTER">
+                    &copy; 2021 DACAW
+                </p>
+            </div>
+            <div class="safe col-12 col-sm-none col-md-4 col-lg-4 d-flex justify-content-center mb-3 mb-sm-3 mb-md-0 mb-lg-0">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 s_a d-flex">
+                        <ion-icon class="mr-2" name="shield-checkmark-outline"></ion-icon>
+                        <span>PAGAMENTO SEGURO</span>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 s_b d-flex justify-content-end">
+                        <div class="d-flex">
+                            <div class="order-2 order-sm-2 order-md-1 order-lg-1 ml-2 mr-0 mr-sm-0 mr-md-2 mr-lg-2">
+                                <div class="d-flex align-itens-center justify-content-center">
+                                    <img src="https://dacaw.com.br/wp-content/uploads/2021/07/privacidade-protegida-mob-icon-1.png">
+                                </div>
+                            </div>
+                            <div class="order-1 order-sm-1 order-md-2 order-lg-2 d-flex align-items-center"><span>PRIVACIDADE PROTEGIDA</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-5 col-lg-5 d-flex d-sm-flex d-md-block d-lg-block text-md-center text-lg-center justify-content-center justify-content-sm-center justify-content-md-end justify-content-lg-end">
+                <img class="pay-methods" src="https://dacaw.com.br/wp-content/uploads/2021/07/mercado-pago-metodos-de-pagamento.jpg" alt="Métodos de pagamento: Visa, Master Card, Hipercard, American Express, Diners Club International, Elo, Mercado Pago, Pix, Boleto Bancário">
+            </div>
+        </div>
+    </footer>
+
+
+
+    </main>
+
+      
+
+    <!-- BOX MESSAGE  -->
+    <div class="d-none row box_message_s1 mx-0">
+        <div class="col-2 icon-1">
+            <ion-icon class="icon-close-s1" name="chevron-back-outline"></ion-icon>
+            <ion-icon class="icon-toggle"name="alert-circle-outline"></ion-icon>
+            <h3 class="mb-0 mr-2 title">Lembre-se</h3>
+        </div>
+        <div class="col-10 text pr-0 pl-2">
+            <h3 class="title">
+                <ion-icon name="ellipsis-vertical-outline" class="pr-1"></ion-icon>
+                Lembre-se
+                <ion-icon name="chevron-down-outline" class="pl-1"></ion-icon>
+            </h3>
+            <div class="message" style="display: none;">
+                <p class="my-1 py-1 py-md-0 py-lg-0 py-xg-0">
+                    <ion-icon name="star-half-outline"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                    <ion-icon name="star-half-outline"></ion-icon>
+                </p>
+                Acima de tudo sua expêriencia é muito importante para nós, portanto, caso tenha alguma dúvida. Por vavor sinta-se à vontade para entrar em contato conosco!
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+    <ul class="product_specs">
+        <li><strong>Material</strong>: <em>Algodão</em></li>
+        <li><strong>Gênero</strong>: <em>Unissex</em></li>
+        <li><strong>Estação</strong> <strong>Adequada</strong>: <em>Inverno</em></li>
+   </ul>
+<ul class="product_notes" style="display: none;">
+    <li>Inverno</em></li>
+    <li>Inverno</em></li>
+</ul>
+<h1 class="title_s1_short_desc title_notes d-none" data-show="product_notes">
+    *Notas
+    <ion-icon name="pin-outline"></ion-icon>
+    <ion-icon class="i_r" name="add-outline"></ion-icon>
+</h1>
+<h1 class="title_s1_short_desc title_specs d-none" data-show="product_specs">
+    Especificações
+    <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+    <ion-icon class="i_r" name="add-outline"></ion-icon>
+</h1>
+
+
+
+
+
+
+
+    
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>
