@@ -324,7 +324,10 @@ div.see_tags_products h1 a:hover{
 }
 
 #footer_c_main div.social a{
-    display: block;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
     width: 40%;
     margin: 0 auto;
     margin-bottom: .5em;
@@ -425,6 +428,30 @@ div.see_tags_products h1 a:hover{
 *
 *
 */
+form.checkout.woocommerce-checkout p input.input-text {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    border: none;
+    padding: 1.3em;
+}
+form.checkout.woocommerce-checkout p#billing_country_field{
+    display: none;
+}
+.woocommerce-checkout form.checkout p.form-row{
+    margin-bottom: .6em;
+}
+form.checkout.woocommerce-checkout h3 {
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: .4em;
+    text-align: center;
+    font-size: 1.7em;
+}
+.woocommerce form .form-row label{
+    text-transform: uppercase;
+    letter-spacing: .3em;
+    font-weight: 600;
+    color: #343a40;
+}
 .woocommerce-checkout .woocommerce-info{
     margin: 0;
 }
@@ -1762,7 +1789,7 @@ section.cards_simple_cont div.card_simple > .content > img{
     text-align: left;
     font-family: 'Montserrat';
     color: #fff;
-    font-size: 2.3em;
+    font-size: 2em;
     margin-bottom: 0;
     font-weight: 300;
     text-transform: uppercase;
@@ -1862,16 +1889,18 @@ section.cards_simple_cont div.card_simple > .content > img{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 8rem;
+    height: 10em;
     position: relative;
     z-index: 1;
-    transform: scale(0.6) translateY(-2rem);
+    padding: 0;
     border-top: 1px solid #ccc;
     border-bottom: 1px solid #ccc;
     cursor: pointer;
     background-repeat: no-repeat;
     background-position: center center;
+    margin-bottom: 1em;
     transition: all .1s ease-in;
+    box-shadow: 0 0.5rem 1rem inset rgb(236 240 243);
 }
 .cards-ui-container .ui-card.active:after {
     content: '';
@@ -1885,17 +1914,15 @@ section.cards_simple_cont div.card_simple > .content > img{
 }
 .cards-ui-container .ui-card.active {
     z-index: 3;
-    transform: scale(1) translateY(0) translateX(0);
     opacity: 1;
     pointer-events: auto;
     border-color: #ccc;
     height: 25em;
-    margin-bottom: 3em;
-    box-shadow: 0 0.5rem 1rem inset rgb(236 240 243);
+    margin: 4em 0 6em 0;
     background-image: var(--bg-image);
     background-size: contain;
     background-position: center;
-    border-top: 4px double #777;
+    border-top: 4px solid #343a40;
 }
 .cards-ui-container .ui-card.active .depa-name{
     opacity: 1;
@@ -1906,20 +1933,23 @@ section.cards_simple_cont div.card_simple > .content > img{
     display: -webkit-flex;
     display: flex;
     justify-content: center;
-    font-size: 3.5em;
-    padding: .2em;
+    align-items: center;
+    font-size: 2em;
+    padding: .2em 0;
+    min-height: 3em;
     width: 100%;
-    background: #ecf0f3;
-    border-top: 1px solid #777;
-    border-bottom: 1px solid #777;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
     opacity: .9;
     transition: all .2s linear;
+    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 .cards-ui-container .ui-card > div.click_to_down > small{
     color: #343a40;
     text-transform: uppercase;
     letter-spacing: .3em;
     margin-right: -.3em;
+    text-align: center;
 }
 .cards-ui-container .ui-card > div.click_to_down > ion-icon{
     position: absolute;
@@ -2239,14 +2269,21 @@ section.cards_simple_cont div.card_simple > .content > img{
     .cards-ui-container .card_wrapper{
         display: block;
     }
-    .cards-ui-container .ui-card{
-        box-shadow: 0 0.5rem 1rem inset rgb(236 240 243);
-    }
     .cards-ui-container .title_depa_cont > div{
         padding: 4em 0;
     }
-    .cards-ui-container .ui-card > div.click_to_down{
-        font-size: 2.5em;
+    .cards-ui-container .ui-card{
+        height: 17em;
+    }
+    .cards-ui-container .ui-card.active{
+        margin: 0;
+        border: none;
+        border-top: 1px solid #ccc;
+        border-right: 6px double #777;
+        border-left: 6px double #777;
+    }
+    .cards-ui-container .ui-card > div.click_to_down {
+        font-size: 2em;
     }
     .woocommerce div.product.owp-thumbs-layout-vertical div.images .flex-control-thumbs {
         max-height: 410px;

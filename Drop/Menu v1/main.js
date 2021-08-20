@@ -74,6 +74,15 @@ $jY(document).ready(function(){
 
         
         //Campo cep
+        //Campo cep
+        //Campo cep
+        //Campo cep
+
+        //Campo cep limpa ao focar
+        $jY(document).on('focus', '#calc_shipping_postcode', function(){
+            $jY(this).val('')    
+        })
+
         $jY(document).on('keyup', '#calc_shipping_postcode', function(){
             l = $jY(this).val().length
             _cep = $jY(this).val()
@@ -132,22 +141,9 @@ $jY(document).ready(function(){
     // 
     if(window.location.href.search('https://dacaw.com.br/checkout/') == 0){
         
-        if($jY('#shipping_postcode').val().length >= 8){
-            
-            $jY.getJSON(__cepUrl($jY('#shipping_postcode').val()), function(data){
-                if(data != undefined){
-                    if(!data.hasOwnProperty('erro')){
-                        $jY('#shipping_address_1').val(data.logradouro)
-                        $jY('#shipping_city').val(data.localidade)
-                    } else{
-                        alert(`CEP Inválido: ${_cep}`)
-                    }
-                }                
-            }).fail(function(){
-                alert('Verifique o CEP. Se o erro persistir por favor entre em contato conosco!')
-            })
-        }
 
+        //Remove os script do bootstrap
+        $jY('head link[href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"]').remove()
 
         $jY(document).on("keyup","#mp-doc-number-div input#docNumber, #box-docnumber input#mp_doc_number", function(){
             if($jY(this).val().length >= 11){
